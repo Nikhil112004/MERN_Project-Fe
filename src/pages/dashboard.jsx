@@ -5,6 +5,7 @@ import GroupIcon from "@mui/icons-material/Group";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import SettingsIcon from "@mui/icons-material/Settings";
 import SearchIcon from "@mui/icons-material/Search";
+import { BACKEND_URL } from "../../config"; 
 
 export const Dashboard = () => {
   const navigate = useNavigate();
@@ -14,7 +15,7 @@ export const Dashboard = () => {
   useEffect(() => {
     async function fetchUsers() {
       try {
-        const res = await axios.get("http://localhost:3000/api/v1/getUser");
+        const res = await axios.get(`${BACKEND_URL}api/v1/getUser`);
         setUsers(res.data);
       } catch (error) {
         console.error("Error fetching users:", error);
@@ -130,7 +131,7 @@ export const Dashboard = () => {
                     onClick={async () => {
                       try {
                         await axios.delete(
-                          `http://localhost:3000/api/v1/deleteUser/${user._id}`
+                          `${BACKEND_URL}api/v1/deleteUser/${user._id}`
                         );
                         setUsers(users.filter((u) => u._id !== user._id));
                       } catch (error) {

@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { BACKEND_URL } from "./config"; 
+import { BACKEND_URL } from "../../config"; 
 
 export function NewUser() {
   const navigate = useNavigate();
