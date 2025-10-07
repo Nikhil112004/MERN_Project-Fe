@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "assignment",
   "version": "1.0.0",
   "description": "",
@@ -29,10 +28,8 @@
   "devDependencies": {
     "nodemon": "^3.1.10"
   }
-}
+},
 
-
-=======
   "name": "bits-frontend",
   "private": true,
   "version": "0.0.0",
@@ -66,5 +63,4 @@
     "globals": "^16.4.0",
     "vite": "^7.1.7"
   }
-}
->>>>>>> faf68d6 (Initial commit with frontend)
+
