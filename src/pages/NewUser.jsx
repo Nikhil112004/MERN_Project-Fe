@@ -36,10 +36,10 @@ export function NewUser() {
         gender,
         location,
       });
-      alert("You have successfully signed up!");
+      alert("You have successfully registered!");
       navigate("/dashboard");
     } catch (e) {
-      alert("Signup failed. Try again.");
+      alert("Registration failed. Try again.");
     }
   }
 
