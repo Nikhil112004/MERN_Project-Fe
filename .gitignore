@@ -1,9 +1,25 @@
 node_modules/
+<<<<<<< HEAD
 .env
 dist/
+=======
+dist/
+build/
+
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+>>>>>>> faf68d6 (Initial commit with frontend)
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
 package-lock.json
 yarn.lock
+<<<<<<< HEAD
+=======
+
+>>>>>>> faf68d6 (Initial commit with frontend)
