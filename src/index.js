@@ -92,3 +92,5 @@ app.get("/api/v1/getUser", async (req, res) => {
 });
 
 app.listen(3000);
+
+//# sourceMappingURL=index.js.map
