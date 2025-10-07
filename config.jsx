@@ -1,0 +1,1 @@
+export const BACKEND_URL= "https://mern-project-be-7umu.vercel.app/"

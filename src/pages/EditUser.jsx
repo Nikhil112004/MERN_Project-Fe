@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
+import { BACKEND_URL } from "../../config";
 
 export function EditUser() {
   const { id } = useParams();
@@ -20,7 +21,7 @@ export function EditUser() {
   useEffect(() => {
     async function fetchUser() {
       try {
-        const res = await axios.get(`http://localhost:3000/api/v1/getUser/${id}`);
+        const res = await axios.get(`${BACKEND_URL}api/v1/getUser/${id}`);
         setUser(res.data);
         setGender(res.data.gender);
         setLoading(false);
@@ -41,7 +42,7 @@ export function EditUser() {
     const userLocation = locationRef.current.value;
 
     try {
-      await axios.put(`http://localhost:3000/api/v1/updateUser/${id}`, {
+      await axios.put(`${BACKEND_URL}api/v1/updateUser/${id}`, {
         firstName,
         lastName,
         email,
@@ -109,7 +110,6 @@ export function EditUser() {
               className="block p-2 mt-2 w-full rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
             />
           </div>
-
           <div>
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               Mobile
@@ -121,7 +121,6 @@ export function EditUser() {
               className="block p-2 mt-2 w-full rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
             />
           </div>
-
           <div>
             <span className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               Gender
